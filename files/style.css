@@ -1,10 +1,26 @@
 .container {
-    /* Grid system for responsiveness */
+  /* Grid system for responsiveness */
   display: grid;
+  /* space between items */
   grid-gap: 20px;
-  grid-template-columns: 1fr 1fr;
+  /* can use auto to fill in any available space */
+  /* repeat just repeats the amount of space you want to use for space */
+  /* "columns" - space for items horizontally */
+  /* auto-fill with minmax auto adjusts the itmes based on the viewport size */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  /*"rows" - space for items vertically */
+  grid-template-rows: 1fr;
+  /* justify-items moves items to the start/end of div space horizontally */
+  /* can use align-items to do the same vertically */
 }
 
+.green {
+    /* using the slash for the start/end of the grid */
+    /* with span you can tell the item to span across a certain amount of grids */
+  /* grid-column: 1/-1; */
+  grid-column: span 2;
+  grid-row: 1/3;
+}
 .zone {
   cursor: pointer;
   display: inline-block;
